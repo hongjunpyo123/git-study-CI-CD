@@ -31,3 +31,7 @@ jobs:
         run: |
           echo $GITHUB_SHA
           echo $GITHUB_REPOSITORY
+          
+      - name: 내 이름
+        run: |
+          echo ${{ secrets.MY_NAME }}
