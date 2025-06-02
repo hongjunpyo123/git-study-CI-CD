@@ -1,14 +1,21 @@
 name: Github Actions 실행시켜보기
 
+#Event : 실행되는 시점을 설정
+# main이라는 브랜치에 push 될 때 아래 Workflow가 실행됨
 on:
   push:
     branches:
       - main
 
+# 하나의 WorkFlow는 1개 이상의 Job으로 구성된다
+# 여러 Job은 기본적으로 병렬적으로 수행된다.
 jobs:
+  # job을 식별하기 위한 id
   My-Deploy-Job:
     runs-on: ubuntu-latest
 
     steps:
       - name: Hello world 찍기
         run: echo "Hello world"
+      - name: ip확인
+        run: ifconfig
