@@ -17,5 +17,12 @@ jobs:
     steps:
       - name: Hello world 찍기
         run: echo "Hello world"
+
       - name: ip확인
         run: ifconfig
+
+      - name: 여러 명령어 문장 작성하기
+        run: |
+          echo "Hello world"
+          echo "Hello world2"
+          echo "Hello world3"
