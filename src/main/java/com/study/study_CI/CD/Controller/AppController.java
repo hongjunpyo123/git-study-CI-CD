@@ -3,6 +3,7 @@ package com.study.study_CI.CD.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
 @RestController
 public class AppController {
 
@@ -11,3 +12,5 @@ public class AppController {
         return "Welcome to the CI/CD Application!";
     }
 }
+
+
