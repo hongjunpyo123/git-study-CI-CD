@@ -9,7 +9,7 @@ public class AppController {
 
     @GetMapping("/")
     public String home() {
-        return "Welcome to the CI/CD Application!";
+        return "cicd test";
     }
 }
 
