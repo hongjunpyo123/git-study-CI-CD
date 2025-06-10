@@ -53,10 +53,10 @@ jobs:
           key: ${{ secrets.EC2_PRIVATE_KEY }}
           script_stop: true
           script: |
-            docker stop githubactions-server || true
-            docker rm githubactions-server || true
-            docker pull ${{ steps.login-ecr.outputs.registry }}/githubactions-server:latest
-            docker run -d --name githubactions-server -p 8080:8080 ${{ steps.login-ecr.outputs.registry }}/githubactions-server:latest
+            sudo docker stop githubactions-server || true
+            sudo docker rm githubactions-server || true
+            sudo docker pull ${{ steps.login-ecr.outputs.registry }}/githubactions-server:latest
+            sudo docker run -d --name githubactions-server -p 8080:8080 ${{ steps.login-ecr.outputs.registry }}/githubactions-server:latest
 
 
 
